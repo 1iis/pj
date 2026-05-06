@@ -1,17 +1,17 @@
 [project]
-name = "my-package"                          # <-- EDIT THIS per project
+name = "pj"
 dynamic = ["version"]
-description = "One thing, done well."
+description = "ProJect utility to init & ship. User-friendly and language-agnostic by design."
 readme = "README.md"
 license = {text = "Apache-2.0"}
 requires-python = ">=3.10"
 dependencies = []
 
 [tool.hatch.version]
-path = "src/my_package/__init__.py"
+path = "src/pj/__init__.py"
 
 [project.scripts]
-my-package = "my_package:main"               # <-- EDIT THIS per project
+pj = "pj:main"
 
 [dependency-groups]
 dev = [
