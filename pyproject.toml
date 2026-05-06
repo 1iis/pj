@@ -1,0 +1,35 @@
+[project]
+name = "my-package"                          # <-- EDIT THIS per project
+dynamic = ["version"]
+description = "One thing, done well."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.hatch.version]
+path = "src/my_package/__init__.py"
+
+[project.scripts]
+my-package = "my_package:main"               # <-- EDIT THIS per project
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0",
+    "ruff>=0.15",
+    "fastship",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 160
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+
+[tool.fastship]
+branch = "main"

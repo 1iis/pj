@@ -1,0 +1,11 @@
+# KISS
+__pycache__/
+*.pyc
+dist/
+*.egg-info/
+
+# 1iis
+.atlas/
+
+# Solveit
+.ipynb
